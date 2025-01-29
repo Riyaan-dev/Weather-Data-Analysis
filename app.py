@@ -55,7 +55,7 @@ predictions = model.predict(X_test)
 mse = mean_squared_error(y_test, predictions)
 st.write(f"### Mean Squared Error: {mse:.2f}")
 
-# Feature Importance
+# Feature importance
 st.header("Feature Importance")
 feature_importance = pd.Series(model.feature_importances_, index=X.columns).sort_values(ascending=False)
 st.bar_chart(feature_importance)
